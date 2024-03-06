@@ -10,6 +10,9 @@ import StartTest from "./Pages/MCQs/StartTest";
 import Quiz from "./Pages/MCQs/Quiz";
 import PassResults from "./Pages/MCQs/PassResults";
 import FailResults from "./Pages/MCQs/FailResults";
+import CourseList from "./Pages/Courses/CourseList";
+import CourseResources from "./Pages/Courses/CourseResources";
+import MCQsStatus from "./Pages/MCQs/MCQsStatus";
 export const Routes = createBrowserRouter([
     {
         path :"/",
@@ -22,6 +25,14 @@ export const Routes = createBrowserRouter([
     {
         path :"/courses",
         element : <Courses/>,      
+    },
+    {
+        path :"/coursesList",
+        element : <CourseList/>,      
+    },
+    {
+        path :"/coursesResources",
+        element : <CourseResources/>,      
     },
     {
         path :"/MCQs",
@@ -55,5 +66,10 @@ export const Routes = createBrowserRouter([
         path :"/Fail-Result",
         element : <FailResults/>,   
     },
+    {
+        path :"/McqsStatus",
+        element : <MCQsStatus/>,   
+    },
+    
 ])
 

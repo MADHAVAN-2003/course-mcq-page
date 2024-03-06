@@ -3,9 +3,10 @@ import { Box, Button, Grid, Typography } from '@mui/material'
 import HeaderSidebar from "../../Components/HeaderSidebar/HeaderSidebar";
 import Header from "../../Components/Header/Header";
 import sad from '../../Assets/☹️.png';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 function FailResults() {
+    const navigate = useNavigate()
     const data = useLocation()
     console.log(data.state.Result.score,"page details")
     return (
@@ -81,7 +82,7 @@ function FailResults() {
                   alignItems :"center"
                 }}>
                   <Button variant='outlined'>No Thanks</Button>
-                  <Button variant='contained'>Next</Button>
+                  <Button variant='contained' onClick={()=> navigate("/McqsStatus")}>Next</Button>
                 </Box>
                 
               </Box>

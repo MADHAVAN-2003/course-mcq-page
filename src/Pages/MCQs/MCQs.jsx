@@ -11,7 +11,7 @@ import {
   Avatar,
 } from "@mui/material";
 import { Link } from "react-router-dom";
-import arrowIcon from '../../Assets/Arrow forward ios.png'
+import arrowIcon from '../../Assets/Arrow-forward.png'
 export const MCQs = () => {
   const cardList = [
     {
@@ -21,31 +21,31 @@ export const MCQs = () => {
       icon  : `${arrowIcon}`
     },
     {
-      title: "Anesthesia Machine Part 1",
+      title: "Anesthesia Machine Part 2",
       questTot: " Number of questions 27",
       duration: "Duration 25 minutes",
       icon  : `${arrowIcon}`
     },
     {
-      title: "Anesthesia Machine Part 1",
+      title: "Anesthesia Machine Part 3",
       questTot: " Number of questions 27",
       duration: "Duration 25 minutes",
       icon  : `${arrowIcon}`
     },
     {
-      title: "Anesthesia Machine Part 1",
+      title: "Anesthesia Machine Part 4",
       questTot: " Number of questions 27",
       duration: "Duration 25 minutes",
       icon  : `${arrowIcon}`
     },
     {
-      title: "Anesthesia Machine Part 1",
+      title: "Anesthesia Machine Part 5",
       questTot: " Number of questions 27",
       duration: "Duration 25 minutes",
       icon  : `${arrowIcon}`
     },
     {
-      title: "Anesthesia Machine Part 1",
+      title: "Anesthesia Machine Part 6",
       questTot: " Number of questions 27",
       duration: "Duration 25 minutes",
       icon  :`${arrowIcon}`
@@ -66,23 +66,25 @@ export const MCQs = () => {
         <Box
           sx={{
             // border: "1px solid black",
-            height: "72vh",
-            width: "85%",
-            marginY: "5%",
-            marginX: "7%",
-            padding: "1%",
+            height: "90vh",          
             display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
+            flexDirection : "column",
           }}
         >
+           <Typography variant="h6" sx={{
+            color:"#264D74",
+            fontFamily:"Poppins",
+            letterSpacing:1,
+            marginX : 6,
+            marginY:3}}
+            >Anesthesia MCQs</Typography>
           <Box
             sx={{
-            //   border: "1px solid black",
+              // border: "1px solid black",
               height: "70vh",
               width: "65vw",
               display: "flex",
-              padding : 5
+              marginX :  15,
             }}
           >
             <Link to="/Start-test" style={{ textDecoration: "none", display: "flex" , flexWrap :"wrap" }}>

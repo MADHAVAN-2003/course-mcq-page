@@ -11,8 +11,7 @@ function LogIn(){
         setShowPassword(!showPassword);
     };
     const formik = useFormik({
-        initialValues: {
-            
+        initialValues: {           
             email:"",
             password:"",
         },
@@ -21,7 +20,6 @@ function LogIn(){
             // axios.post(baseURL , val)
             // alert("User added sucessfully")
             // navigate('/')
-
         },
 
     })
@@ -93,9 +91,7 @@ function LogIn(){
                     position : "absolute",
                     top : "200px",
                     left : "750px",
-                    padding : "2%",
-                    
-                   
+                    padding : "2%",              
                }}>
                     <form onSubmit={formik.handleSubmit}>
                         <TextField
@@ -128,8 +124,7 @@ function LogIn(){
                                         <IconButton
                                             aria-label="toggle password visibility"
                                             onClick={handleClickShowPassword}
-                                            edge="end"
-                                            
+                                            edge="end"                                            
                                         >
                                             {showPassword ? <VisibilityOff /> : <Visibility />}
                                         </IconButton>
@@ -141,7 +136,6 @@ function LogIn(){
                                 marginBottom: "5%",
                             }}
                         />
-
                         <Typography variant='h6' gutterBottom sx={{
                             color :"#4A7DFD",
                             fontSize : "18px",
@@ -150,7 +144,6 @@ function LogIn(){
                         }}>
                             Forgot Password ?
                         </Typography>
-
                         <Button type='submit' sx={{
                             backgroundColor : "#316AFC",
                             color : "white",
@@ -161,12 +154,10 @@ function LogIn(){
                             }
                         }}>Login</Button>
                     </form>
-               </Box>
-               
+               </Box>               
             </Grid>
         </Box>
-        </div>
-        
+        </div>        
     )
 }
 

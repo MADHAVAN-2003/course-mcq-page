@@ -3,11 +3,12 @@ import React, { useEffect } from 'react'
 import HeaderSidebar from "../../Components/HeaderSidebar/HeaderSidebar";
 import Header from "../../Components/Header/Header";
 import star from '../../Assets/Star.png';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
 function PassResults() {
- 
+  
+  const navigate = useNavigate()
   const data = useLocation()
   // console.log(data.state.Result.score,"page details")
 
@@ -86,7 +87,7 @@ function PassResults() {
               alignItems :"center"
             }}>
               <Button variant='outlined'>No Thanks</Button>
-              <Button variant='contained'>Next</Button>
+              <Button variant='contained' onClick={()=> navigate("/McqsStatus")}>Next</Button>
             </Box>
             
           </Box>

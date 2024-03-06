@@ -14,9 +14,10 @@ import {
 import Header from "../../Components/Header/Header";
 import axios from "axios";
 import cardImg from "../../Assets/card-img.png";
+import { Link } from "react-router-dom";
 
 export const Courses = () => {
-  const url = "http://localhost:8000/Anesthesia";
+  const url = "http://localhost:7000/Anesthesia";
   const [course, setCourse] = useState([]);
   useEffect(() => {
     const fetchdata = async () => {
@@ -48,58 +49,63 @@ export const Courses = () => {
             marginY:2}}
             >Anesthesia & Critical care</Typography>
 
-          <Box
-            sx={{
-            //   border: "1px solid black",
-              display: "flex",
-              flexWrap: "wrap",
-            //   height: "100vh",
-              gap: 2,
-              justifyContent: "space-around",
-              padding: "2%",
-            }}
-          >
-            {course.map((value) => (
-              <Card
-                sx={{
-                  maxWidth: 345,
-                  boxShadow:
-                    "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px",
-                  padding: "1%",
-                  borderRadius: "10px",
-                }}
-              >
-                <CardMedia sx={{ height: 150 }} image={cardImg} />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    {value.courseTitle}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    gutterBottom
-                    color="text.secondary"
+            
+          <Link to="/coursesList" style={{ textDecoration: "none" }}>
+            <Box 
+              sx={{
+              //   border: "1px solid black",
+                display: "flex",
+                flexWrap: "wrap",
+              //   height: "100vh",
+                gap: 2,
+                justifyContent: "space-around",
+                padding: "2%",
+              }}
+            >
+                {course.map((value) => (
+                  <Card
+                    sx={{
+                      maxWidth: 345,
+                      boxShadow:4,
+                      "&:hover": {
+                        boxShadow: 10,
+                      },
+                      padding: "1%",
+                      borderRadius: "10px",
+                    }}
                   >
-                    {value.content}
-                  </Typography>
-                  <br />
-                  <Typography
-                  //   sx={{ position: "absolute", top: "370px" }}
-                    variant="p"
-                    color="#264D74"
-                    component="div"
-                  >
-                    {value.price}
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button size="small" variant="contained">
-                    Add to Card
-                  </Button>
-                  <Button size="small">Features</Button>
-                </CardActions>
-              </Card>
-            ))}
-          </Box>
+                    <CardMedia sx={{ height: 150 }} image={cardImg} />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="div">
+                        {value.courseTitle}
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        gutterBottom
+                        color="text.secondary"
+                      >
+                        {value.content}
+                      </Typography>
+                      <br />
+                      <Typography
+                      //   sx={{ position: "absolute", top: "370px" }}
+                        variant="p"
+                        color="#264D74"
+                        component="div"
+                      >
+                        {value.price}
+                      </Typography>
+                    </CardContent>
+                    <CardActions>
+                      <Button size="small" variant="contained">
+                        Add to Card
+                      </Button>
+                      <Button size="small">Features</Button>
+                    </CardActions>
+                  </Card>
+                ))}
+            </Box>
+          </Link>
         </div>
       </Grid>
     </Grid>
