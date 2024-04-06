@@ -1,0 +1,47 @@
+{
+  
+    "Anesthesia": [
+      {
+        "courseTitle": "Anesthesia MD/DNB 1",
+        "content": "1200 courses & quizes",
+        "courseImg": "E:/maadhavan- development/react-prac/branding-page/src/Assets/card-img",
+        "reviewImg": "E:/maadhavan- development/react-prac/branding-page/src/Assets/ReviewImg",
+        "price": "Rs.15000"
+      },
+      {
+        "courseTitle": "Anesthesia MD/DNB 2",
+        "content": "1200 courses & quizes",
+        "courseImg": "E:/maadhavan- development/react-prac/branding-page/src/Assets/card-img",
+        "reviewImg": "E:/maadhavan- development/react-prac/branding-page/src/Assets/ReviewImg",
+        "price": "Rs.15000"
+      },
+      {
+        "courseTitle": "Anesthesia MD/DNB 3",
+        "content": "1200 courses & quizes",
+        "courseImg": "E:/maadhavan- development/react-prac/branding-page/src/Assets/card-img",
+        "reviewImg": "E:/maadhavan- development/react-prac/branding-page/src/Assets/ReviewImg",
+        "price": "Rs.15000"
+      },
+      {
+        "courseTitle": "Anesthesia MD/DNB 4",
+        "content": "1200 courses & quizes",
+        "courseImg": "E:/maadhavan- development/react-prac/branding-page/src/Assets/card-img",
+        "reviewImg": "E:/maadhavan- development/react-prac/branding-page/src/Assets/ReviewImg",
+        "price": "Rs.15000"
+      },
+      {
+        "courseTitle": "Anesthesia MD/DNB 5",
+        "content": "1200 courses & quizes",
+        "courseImg": "E:/maadhavan- development/react-prac/branding-page/src/Assets/card-img",
+        "reviewImg": "E:/maadhavan- development/react-prac/branding-page/src/Assets/ReviewImg",
+        "price": "Rs.15000"
+      },
+      {
+        "courseTitle": "Anesthesia MD/DNB 6",
+        "content": "1200 courses & quizes",
+        "courseImg": "E:/maadhavan- development/react-prac/branding-page/src/Assets/card-img",
+        "reviewImg": "E:/maadhavan- development/react-prac/branding-page/src/Assets/ReviewImg",
+        "price": "Rs.15000"
+      }
+    ]}
+    
