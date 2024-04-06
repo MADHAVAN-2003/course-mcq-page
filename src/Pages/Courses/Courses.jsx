@@ -17,7 +17,7 @@ import cardImg from "../../Assets/card-img.png";
 import { Link } from "react-router-dom";
 
 export const Courses = () => {
-  const url = "http://localhost:7000/Anesthesia";
+  const url = "http://localhost:8000/Anesthesia";
   const [course, setCourse] = useState([]);
   useEffect(() => {
     const fetchdata = async () => {

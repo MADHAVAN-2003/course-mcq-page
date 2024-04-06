@@ -19,12 +19,12 @@ function CourseResources() {
         },
         {          
             name: "E-Books",
-            link :"/e-book",
+            link :"/E-Books",
             icon : `${cardImg}`          
         },
         {          
             name: "Sildes",
-            link :"/Sildes",
+            link :"/Slides",
             icon : `${cardImg}`          
         }
     ]

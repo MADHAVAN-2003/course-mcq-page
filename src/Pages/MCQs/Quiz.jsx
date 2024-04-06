@@ -3,95 +3,22 @@ import {Box,Button,Container, Grid,Typography,Paper, ListItemText,ListItem, List
 import HeaderSidebar from "../../Components/HeaderSidebar/HeaderSidebar";
 import Header from "../../Components/Header/Header";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export default function Quiz() {
-  const questions = [
-    {
-      id: 1,
-      questionNo: "Q1",
-      question: "Q1. What is the primary function of anesthesia?",
-      options: [
-        "Pain relief",
-        "Inducing sleep",
-        "Increasing heart rate",
-        "Enhancing memory",
-      ],
-      answer: "Pain relief",
-    },
-    {
-      id: 2,
-      questionNo: "Q2",
-      question: "Q2. Which type of anesthesia is commonly used in surgeries?",
-      options: [
-        "General anesthesia",
-        "Local anesthesia",
-        "Regional anesthesia",
-        "Topical anesthesia",
-      ],
-      answer: "General anesthesia",
-    },
-    {
-      id: 3,
-      questionNo: "Q3",
-      question: "Q3. What is the purpose of intubation during anesthesia?",
-      options: [
-        "To monitor blood pressure",
-        "To provide oxygen",
-        "To administer medication",
-        "To measure heart rate",
-      ],
-      answer: "To provide oxygen",
-    },
-    {
-      id: 4,
-      questionNo: "Q4",
-      question: "Q4. Which medication is commonly used for conscious sedation?",
-      options: ["Propofol", "Ketamine", "Midazolam", "Fentanyl"],
-      answer: "Midazolam",
-    },
-    {
-      id: 5,
-      questionNo: "Q5",
-      question: "Q5. What is the main advantage of regional anesthesia?",
-      options: [
-        "Loss of consciousness",
-        "Rapid onset",
-        "Minimal systemic effects",
-        "Long-lasting effect",
-      ],
-      answer: "Minimal systemic effects",
-    },
-    {
-      id: 6,
-      questionNo: "Q6",
-      question:
-        "Q6. Which nerve block is commonly used for lower limb surgeries?",
-      options: [
-        "Brachial plexus block",
-        "Femoral nerve block",
-        "Sciatic nerve block",
-        "Intercostal nerve block",
-      ],
-      answer: "Femoral nerve block",
-    },
-    {
-      id: 7,
-      questionNo: "Q7",
-      question: "Q7. What is the most common side effect of anesthesia?",
-      options: ["Nausea and vomiting", "Hypertension", "Insomnia", "Dry mouth"],
-      answer: "Nausea and vomiting",
-    },
-    {
-      id: 8,
-      questionNo: "Q8",
-      question:
-        "Q8. Which organ is primarily responsible for metabolizing anesthetic drugs?",
-      options: ["Liver", "Kidney", "Heart", "Lung"],
-      answer: "Liver",
-    },
-   
-  ];
-  const [selectedQuestion, setSelectedQuestion] = useState(questions.find((val)=>val.questionNo === "Q1"));
+  const URL = "http://localhost:7000/Questions"
+
+  const [ questions , SetQuestions] = useState([])
+  useEffect(()=>{
+    const fetchData = async ()=>{
+      let questionData = await axios.get(URL)
+      // console.log(questionData.data);
+      SetQuestions(questionData.data)
+    }
+    fetchData()
+  },[])
+ 
+  const [selectedQuestion, setSelectedQuestion] = useState(questions[0]);
   const [selectedQuestionIndex, setSelectedQuestionIndex] = useState(1)
   const [userAnswers, setUserAnswers] = useState('');
   const [ result , setResult ] = useState({
@@ -128,7 +55,7 @@ export default function Quiz() {
         
       )
     }
-   console.log(result)
+  //  console.log(result)
   
   const onClickPrevious = () => {
     if (selectedQuestionIndex > 0) {

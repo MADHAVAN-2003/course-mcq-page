@@ -1,5 +1,4 @@
 import { Box, Typography } from "@mui/material";
-
 import RaaonlineLogo from '../../Assets/raaonline-logo 4.png';
 import HomeIcon from '../../Assets/Home.png'
 import CourseIcon from '../../Assets/Course.png';
@@ -9,8 +8,7 @@ import SettingsIcon from '../../Assets/Settings.png';
 import VideoIcon from '../../Assets/Video.png';
 import { Link } from "react-router-dom";
 
-function HeaderSidebar() {
-   
+function HeaderSidebar() {  
     const navLinks =  [
         {
             name : "Home",
@@ -45,10 +43,7 @@ function HeaderSidebar() {
     ];
     return (
       <div style={{display:"inline"}}>
-       
-    
         {/* Sidebar */}
-
         <Box
           sx={{
             width: "24vw",
@@ -111,7 +106,7 @@ function HeaderSidebar() {
                 >
                   <Box
                     sx={{
-                      // border : "1px solid black",
+                      //  border : "1px solid black",
                       display: "flex",
                       alignItems: "center",
                       gap: 2,

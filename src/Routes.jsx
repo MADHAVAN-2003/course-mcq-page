@@ -13,6 +13,11 @@ import FailResults from "./Pages/MCQs/FailResults";
 import CourseList from "./Pages/Courses/CourseList";
 import CourseResources from "./Pages/Courses/CourseResources";
 import MCQsStatus from "./Pages/MCQs/MCQsStatus";
+import Ebook from "./Pages/EBooks/EBook";
+import Slides from "./Pages/Slides/Slides";
+import EBookPdf from "./Pages/EBooks/EBookPdf";
+import SlidesPPT from "./Pages/Slides/SlidesPPT";
+
 export const Routes = createBrowserRouter([
     {
         path :"/",
@@ -70,6 +75,21 @@ export const Routes = createBrowserRouter([
         path :"/McqsStatus",
         element : <MCQsStatus/>,   
     },
-    
+    {
+        path :"/E-Books",
+        element : <Ebook/>,   
+    },
+    {
+        path :"/E-Books-pdf",
+        element : <EBookPdf/>,   
+    },
+    {
+        path :"/Slides",
+        element : <Slides/>,   
+    },
+    {
+        path :"/Slides-ppt",
+        element : <SlidesPPT/>,   
+    },
 ])
 

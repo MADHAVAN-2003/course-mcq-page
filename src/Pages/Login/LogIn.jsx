@@ -2,21 +2,39 @@ import './LogIn.css'
 import { Avatar, Box, Grid, Typography,TextField , InputAdornment, IconButton, Button } from '@mui/material'
 import logo from '../../Assets/Round Icon.png'
 import { useFormik } from 'formik'
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 function LogIn(){
+    const navigate = useNavigate()
     const [showPassword, setShowPassword] = useState(false);
-
+    const [user , setUser] = useState()
     const handleClickShowPassword = () => {
         setShowPassword(!showPassword);
     };
+    
+    useEffect(()=>{
+        const userData  = async ()=>{
+           let userRes = await axios.get("http://localhost:6500/users")
+           console.log(userRes.data)
+           setUser(userRes.data)
+        }
+        userData()
+    },[])
     const formik = useFormik({
         initialValues: {           
             email:"",
             password:"",
         },
         onSubmit: (val) => {
-            console.log(val,"form values")
+            // console.log(val,"form values")
+            if(val.email === user[0].email && val.password === user[0].password){
+                navigate('/home')
+            }
+            else{
+                alert("Invalid User")
+            }
             // axios.post(baseURL , val)
             // alert("User added sucessfully")
             // navigate('/')
